@@ -18,17 +18,7 @@ module.exports.notAuth = (req, res, next) =>{
 };
 
 module.exports.isOwneredByOwnSession = (req, res, next) =>{
-<<<<<<< HEAD
     if (req.isAuthenticated() && (req.params.userId == req.user._id || req.params.id == req.user._id || req.user.role === constants.user.ADMIN)) {
-=======
-    console.log(req.params.id);
-    console.log(req.user._id);
-    console.log(req.user._id);
-    console.log(req.user._id);
-    console.log(req.user._id);
-    
-    if (req.user && req.params.id === req.user._id) {
->>>>>>> 6362f268d5c986531193673bb19a667f7cfac32f
         console.log('OWNER IS LOGGED AND CONFIRMED IDENTIITY');
         next();     
     } else{

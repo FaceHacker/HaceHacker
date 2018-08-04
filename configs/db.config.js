@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const DB_NAME = 'facebook';
-const MONGO_URI = `mongodb://localhost/${DB_NAME}`;
+const URI = process.env.MONGO_URI;
 
-mongoose.connect(MONGO_URI,  { useMongoClient: true })
+mongoose.connect(URI,  { useMongoClient: true })
 .then(()=>{
-    console.log(`connected to database: ${MONGO_URI}`);   
+    console.log(`connected to database: ${URI}`);   
 })
 .catch(error =>{
     console.log(error);
